@@ -1,0 +1,13 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#DDEBFF"/>
+  <rect x="70" y="70" width="1060" height="760" rx="36" fill="#1A3C6E" fill-opacity="0.08" stroke="#1A3C6E" stroke-opacity="0.18" stroke-width="4" stroke-dasharray="12 16"/>
+  <circle cx="230" cy="220" r="84" fill="#F5C518" fill-opacity="0.88"/>
+  <circle cx="970" cy="680" r="92" fill="#F97316" fill-opacity="0.18"/>
+  <path d="M280 620C280 555.83 332.03 503.8 396.2 503.8H803.8C867.97 503.8 920 555.83 920 620V650H280V620Z" fill="#1A3C6E" fill-opacity="0.15"/>
+  <path d="M355 470L600 290L845 470V650H355V470Z" fill="#1A3C6E" fill-opacity="0.22"/>
+  <path d="M440 650V470H760V650" stroke="#1A3C6E" stroke-width="18" stroke-linecap="round"/>
+  <path d="M480 650V520H720V650" stroke="#F97316" stroke-opacity="0.8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M525 650V560H675V650" stroke="#F5C518" stroke-width="18" stroke-linecap="round"/>
+  <text x="600" y="760" text-anchor="middle" fill="#1A3C6E" font-family="Arial, sans-serif" font-size="48" font-weight="700">Little Gems School</text>
+  <text x="600" y="812" text-anchor="middle" fill="#1A3C6E" fill-opacity="0.72" font-family="Arial, sans-serif" font-size="28" font-weight="600">Campus Photo Placeholder</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="balloonGrad" cx="0.38" cy="0.32" r="0.75">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="55%" stop-color="#E3242B"/>
+      <stop offset="100%" stop-color="#A81820"/>
+    </radialGradient>
+    <linearGradient id="bgShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE04D"/>
+      <stop offset="100%" stop-color="#FFC400"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Gradient bg -->
+  <rect width="512" height="512" rx="96" fill="url(#bgShade)"/>
+
+  <!-- Balloon string (curly) -->
+  <path d="M 256 345 Q 275 385 250 420 Q 230 448 256 472"
+        stroke="#2a2a2a" stroke-width="7" fill="none" stroke-linecap="round"/>
+
+  <!-- Balloon body -->
+  <ellipse cx="256" cy="215" rx="145" ry="170" fill="url(#balloonGrad)"/>
+
+  <!-- Small highlight (top-left corner of balloon) -->
+  <ellipse cx="195" cy="130" rx="28" ry="40" fill="#ffffff" opacity="0.5"/>
+  <ellipse cx="188" cy="118" rx="10" ry="16" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Balloon knot -->
+  <path d="M 240 382 L 272 382 L 264 410 L 248 410 Z" fill="#8A1418"/>
+
+  <!-- "LG" monogram inside balloon -->
+  <text x="256" y="260" font-family="'Arial Black', 'Helvetica', sans-serif" font-weight="900"
+        font-size="140" fill="#ffffff" text-anchor="middle" letter-spacing="-2">LG</text>
+</svg>

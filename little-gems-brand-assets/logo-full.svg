@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <!-- "little" text in red -->
+  <g font-family="'Arial Black', 'Helvetica', sans-serif" font-weight="900">
+    <text x="60" y="220" font-size="190" fill="#E3242B" letter-spacing="-8">little</text>
+  </g>
+
+  <!-- Balloon string (curly) -->
+  <path d="M 545 95 Q 555 130 540 160 Q 525 190 545 220 Q 560 250 540 275"
+        stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Balloon -->
+  <ellipse cx="540" cy="80" rx="52" ry="62" fill="#E3242B"/>
+  <ellipse cx="520" cy="55" rx="14" ry="20" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="515" cy="50" rx="5" ry="8" fill="#ffffff" opacity="0.9"/>
+  <!-- Balloon knot -->
+  <path d="M 535 138 L 545 138 L 542 148 L 538 148 Z" fill="#B01E24"/>
+
+  <!-- "GEMS" text with multi-color letters -->
+  <g font-family="'Arial Black', 'Arial', sans-serif" font-weight="900" font-size="150" letter-spacing="2">
+    <!-- G - Red -->
+    <text x="180" y="370" fill="#E3242B" stroke="#1a1a1a" stroke-width="4" paint-order="stroke fill">G</text>
+    <!-- E - Blue -->
+    <text x="300" y="370" fill="#1B9CE0" stroke="#1a1a1a" stroke-width="4" paint-order="stroke fill">E</text>
+    <!-- M - Yellow -->
+    <text x="400" y="370" fill="#FFD400" stroke="#1a1a1a" stroke-width="4" paint-order="stroke fill">M</text>
+    <!-- S - Green -->
+    <text x="540" y="370" fill="#6FBE44" stroke="#1a1a1a" stroke-width="4" paint-order="stroke fill">S</text>
+  </g>
+
+  <!-- "SCHOOL" text in black -->
+  <g font-family="'Arial Black', 'Arial', sans-serif" font-weight="900">
+    <text x="290" y="465" font-size="80" fill="#1a1a1a" letter-spacing="4">SCHOOL</text>
+  </g>
+</svg>

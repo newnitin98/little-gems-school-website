@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Rounded square bg -->
+  <rect width="64" height="64" rx="12" fill="#FFD400"/>
+
+  <!-- String -->
+  <path d="M 32 38 Q 35 44 31 50 Q 28 54 32 57"
+        stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Balloon -->
+  <ellipse cx="32" cy="26" rx="17" ry="20" fill="#E3242B"/>
+
+  <!-- Highlight -->
+  <ellipse cx="26" cy="18" rx="4" ry="6" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Knot -->
+  <path d="M 30 44 L 34 44 L 33 48 L 31 48 Z" fill="#B01E24"/>
+
+  <!-- "LG" -->
+  <text x="32" y="32" font-family="Arial Black, sans-serif" font-weight="900"
+        font-size="16" fill="#ffffff" text-anchor="middle">LG</text>
+</svg>

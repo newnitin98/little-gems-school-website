@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-light-bg font-sans text-body-text antialiased;
+}
+
+main {
+  @apply flex-1;
+}
+
+* {
+  @apply border-slate-200;
+}
+
+::selection {
+  @apply bg-secondary/60 text-primary;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.marquee-track {
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

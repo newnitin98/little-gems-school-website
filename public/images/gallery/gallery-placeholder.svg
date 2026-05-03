@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#FFF7D6"/>
+  <rect x="76" y="76" width="1048" height="748" rx="36" fill="#FFFFFF" stroke="#1A3C6E" stroke-opacity="0.14" stroke-width="4"/>
+  <rect x="170" y="182" width="860" height="420" rx="32" fill="#1A3C6E" fill-opacity="0.1"/>
+  <circle cx="280" cy="300" r="62" fill="#F97316" fill-opacity="0.24"/>
+  <circle cx="910" cy="250" r="48" fill="#F5C518" fill-opacity="0.9"/>
+  <circle cx="870" cy="560" r="74" fill="#1A3C6E" fill-opacity="0.12"/>
+  <path d="M210 610L420 400L620 560L760 470L990 650H210V610Z" fill="#1A3C6E" fill-opacity="0.18"/>
+  <text x="600" y="720" text-anchor="middle" fill="#1A3C6E" font-family="Arial, sans-serif" font-size="48" font-weight="700">Little Gems Gallery</text>
+  <text x="600" y="772" text-anchor="middle" fill="#1A3C6E" fill-opacity="0.72" font-family="Arial, sans-serif" font-size="28" font-weight="600">Photo Placeholder</text>
+</svg>
