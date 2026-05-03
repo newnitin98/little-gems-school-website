@@ -119,7 +119,7 @@ export function Navbar() {
           isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
         )}
       >
-        <div className="mt-20 flex h-full flex-col">
+        <div className="mt-20 flex h-full flex-col pb-20">
           <nav className="flex flex-col gap-6">
             {navigationLinks.map((link) => (
               <Link
