@@ -15,31 +15,13 @@ export function Footer() {
     <footer className="bg-primary text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.4fr,1fr,1fr,1fr] lg:px-8">
         <div>
-          <div className="flex items-center gap-3">
-            <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-white/10 lg:hidden">
-              <Image
-                src="/logo-mark.svg"
-                alt="Little Gems School logo"
-                fill
-                sizes="56px"
-                className="object-cover"
-              />
-            </div>
-            <div className="hidden lg:block">
-              <Image
-                src="/logo-full.svg"
-                alt="Little Gems School full logo"
-                width={240}
-                height={150}
-                sizes="240px"
-                className="h-auto w-[190px] xl:w-[230px]"
-              />
-            </div>
-            <div className="lg:hidden">
-              <p className="font-heading text-xl font-semibold">{schoolInfo.name}</p>
-              <p className="text-sm text-white/70">{schoolInfo.tagline}</p>
-            </div>
-          </div>
+          <Image
+            src="/images/logos/little-gems-logo.jpeg"
+            alt="Little Gems School logo"
+            width={1600}
+            height={1037}
+            className="h-12 w-auto rounded-xl sm:h-14"
+          />
           <p className="mt-5 max-w-sm text-sm leading-7 text-white/75">
             {schoolInfo.footer.description}
           </p>

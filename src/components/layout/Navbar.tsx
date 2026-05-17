@@ -41,28 +41,15 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-12 w-12 overflow-hidden rounded-2xl bg-primary sm:hidden">
-              <Image
-                src="/logo-mark.svg"
-                alt="Little Gems School logo"
-                fill
-                sizes="48px"
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div className="hidden sm:block">
-              <Image
-                src="/logo-full.svg"
-                alt="Little Gems School full logo"
-                width={200}
-                height={125}
-                sizes="200px"
-                className="h-auto w-[150px] md:w-[190px]"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logos/little-gems-logo.jpeg"
+              alt="Little Gems School logo"
+              width={1600}
+              height={1037}
+              className="h-10 w-auto rounded-xl sm:h-11 md:h-12"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex">
