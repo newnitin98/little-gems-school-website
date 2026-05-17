@@ -70,16 +70,20 @@ export function HeroSection() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 loading="eager"
-                className="object-cover"
+                className="object-cover object-[center_20%]"
+                style={{ filter: "brightness(1.05) saturate(1.1) contrast(1.02)" }}
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent" />
+              {/* Warm bottom gradient for text legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+              {/* Subtle warm top vignette */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">
                 <p className="text-sm uppercase tracking-[0.24em] text-secondary">
                   Little Gems Campus
                 </p>
                 <p className="mt-2 max-w-xs font-heading text-2xl font-semibold text-white">
-                  Warm classrooms, safe routines, and joyful learning every day.
+                  Focused learning, confident readers, and a caring classroom environment.
                 </p>
               </div>
             </div>

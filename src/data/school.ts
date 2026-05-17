@@ -59,9 +59,9 @@ export const schoolInfo = {
       "Activity-based English-medium learning",
       "Safe, welcoming campus on Tilwara Road",
     ],
-    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80",
+    image: "/images/school/hero-students-reading.jpeg",
     imageAlt:
-      "Students enjoying a cheerful classroom session at Little Gems School",
+      "Little Gems School students focused on reading books in the classroom",
   },
   homepageIntro: {
     whyChooseUsTitle: "Why parents choose Little Gems School",
