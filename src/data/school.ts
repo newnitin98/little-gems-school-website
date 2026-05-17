@@ -241,7 +241,7 @@ export const schoolInfo = {
     upcoming: [
       {
         title: "School Reopening Orientation",
-        date: "June 2026",
+        date: "July 2026",
         audience: "All new and returning families",
         summary:
           "A welcome session for parents and students to understand routines, expectations, and the academic year ahead.",
@@ -267,7 +267,7 @@ export const schoolInfo = {
       "Parents will receive class-specific material lists after admission confirmation.",
     ],
     calendar: [
-      { month: "June", highlight: "Orientation and classroom settling period" },
+      { month: "July", highlight: "Orientation and classroom settling period" },
       { month: "August", highlight: "Independence Day and activity showcase" },
       { month: "October", highlight: "Festival celebrations and thematic learning week" },
       { month: "December", highlight: "Winter event and term review" },
