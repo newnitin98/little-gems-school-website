@@ -67,9 +67,9 @@ export const schoolInfo = {
     whyChooseUsTitle: "Why parents choose Little Gems School",
     whyChooseUsSubtitle:
       "Families trust us for the balance of warmth, discipline, and a foundation-focused learning environment designed around young children.",
-    academicsTitle: "Programs designed for each stage of early learning",
+    academicsTitle: "Programs Designed for Every Stage of Early Learning",
     academicsSubtitle:
-      "From the first classroom experience to confident primary learning, every program is age-appropriate, engaging, and thoughtfully supported.",
+      "From foundational play-based learning to confident primary education, each programme at Little Gems School is thoughtfully designed to support growth, creativity, and communication.",
     facilitiesTitle: "Spaces that support happy and focused learning",
     facilitiesSubtitle:
       "Our campus is planned to feel safe, cheerful, and practical for young learners every single day.",

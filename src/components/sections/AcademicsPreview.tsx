@@ -19,7 +19,7 @@ export function AcademicsPreview() {
         </Button>
       </div>
 
-      <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
         {programs.map((program) => (
           <ProgramCard key={program.id} program={program} />
         ))}

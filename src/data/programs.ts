@@ -1,7 +1,9 @@
 export type Program = {
   id: string;
+  stageNumber: string;
   title: string;
-  ageRange: string;
+  classRange: string;
+  division: string;
   summary: string;
   detail: string;
   highlights: string[];
@@ -10,62 +12,59 @@ export type Program = {
 
 export const programs: Program[] = [
   {
-    id: "pre-nursery",
-    title: "Pre-Nursery",
-    ageRange: "2.5 to 3.5 years",
+    id: "foundational-stage-1",
+    stageNumber: "01",
+    title: "Basic Foundational Stage",
+    classRange: "Play Nursery to Sr. KG",
+    division: "Pre-Primary",
     summary:
-      "A gentle first-school experience focused on routines, sensory play, music, and joyful social interaction.",
+      "Building comfort, confidence, and curiosity through storytelling, phonics, play-based activities, music, movement, and hands-on learning experiences.",
     detail:
-      "Children are introduced to classroom habits through storytelling, movement games, hands-on activities, and plenty of guided care so they feel safe and curious every day.",
+      "This stage focuses on building comfort, confidence, and curiosity in young learners through storytelling, phonics, play-based activities, music, movement, and hands-on learning experiences. Children develop early language skills, social confidence, and a genuine love for learning in a safe and caring classroom environment.",
     highlights: [
-      "Settling support and nurturing classroom routines",
-      "Rhymes, free play, storytelling, and fine-motor practice",
-      "Teacher-guided social development in a caring environment",
+      "Early language and phonics development",
+      "Play-based and activity-oriented learning",
+      "Social interaction and confidence building",
+      "Fine motor skill and creative development",
+      "Safe, caring, and engaging classroom environment",
     ],
     icon: "baby",
   },
   {
-    id: "nursery-kg",
-    title: "Nursery & KG",
-    ageRange: "3.5 to 5.5 years",
+    id: "foundational-stage-2",
+    stageNumber: "02",
+    title: "Foundational Stage",
+    classRange: "Class 1 and 2",
+    division: "Primary Classes",
     summary:
-      "Foundational readiness with early literacy, number sense, communication, and creative exploration.",
+      "Structured academic learning with a strong focus on reading, writing, mathematics, communication skills, and conceptual understanding.",
     detail:
-      "Our Nursery and KG program builds confidence through phonics-rich exposure, playful mathematics, themed learning corners, and daily opportunities to speak, create, and collaborate.",
+      "Students begin structured academic learning with a strong focus on reading, writing, mathematics, communication skills, and conceptual understanding through interactive classroom activities. Daily revision, teacher guidance, and activity-based approaches ensure every child builds a confident and lasting academic foundation.",
     highlights: [
-      "Phonics readiness, vocabulary growth, and conversation practice",
-      "Early numeracy with manipulatives, patterns, and puzzles",
-      "Art, craft, dance, and celebration-based learning",
-    ],
-    icon: "blocks",
-  },
-  {
-    id: "class-1-3",
-    title: "Class 1 to 3",
-    ageRange: "5.5 to 8 years",
-    summary:
-      "Structured academics blended with projects, reading habits, and concept-based learning across core subjects.",
-    detail:
-      "Students strengthen English, mathematics, EVS, and general knowledge through classroom interaction, worksheets, mini-projects, and teacher feedback that keeps learning encouraging and clear.",
-    highlights: [
-      "Strong language and reading comprehension practice",
-      "Concept-focused mathematics and EVS activities",
-      "Class presentations, handwriting, and daily revision support",
+      "Strong foundation in English and Mathematics",
+      "Concept-based classroom learning",
+      "Reading comprehension and communication practice",
+      "Activity-based EVS and project work",
+      "Daily revision and teacher guidance",
     ],
     icon: "book-open",
   },
   {
-    id: "class-4-5",
-    title: "Class 4 to 5",
-    ageRange: "8 to 10 years",
+    id: "preparatory-stage-3",
+    stageNumber: "03",
+    title: "Preparatory Stage",
+    classRange: "Class 3, 4 and 5",
+    division: "Primary Classes",
     summary:
-      "Confident primary learning with greater independence, leadership, and preparation for the next stage of schooling.",
+      "Preparing students for higher academic readiness through deeper subject understanding, problem-solving, and leadership development.",
     detail:
-      "This stage sharpens academic readiness through deeper subject learning, problem-solving tasks, co-curricular participation, and regular mentoring so students grow as capable learners.",
+      "This stage prepares students for higher academic readiness through deeper subject understanding, problem-solving, leadership development, and co-curricular participation. Students build independence, public speaking confidence, and a well-rounded academic profile that sets them up for the next stage of schooling.",
     highlights: [
-      "Deeper subject understanding with revision cycles",
-      "Leadership roles, public speaking, and responsibility building",
-      "Balanced focus on academics, projects, and co-curricular growth",
+      "Advanced reading and comprehension skills",
+      "Subject-focused academic strengthening",
+      "Public speaking and confidence building",
+      "Leadership and responsibility development",
+      "Balanced focus on academics and activities",
     ],
     icon: "graduation-cap",
   },

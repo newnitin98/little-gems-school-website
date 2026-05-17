@@ -52,10 +52,10 @@ export default function AcademicsPage() {
       <SectionWrapper className="bg-light-bg">
         <SectionHeading
           eyebrow="Programs"
-          title="Program details from early years to upper primary"
-          description="Each stage is tailored to the child's age, readiness, and growing independence."
+          title="Programs Designed for Every Stage of Early Learning"
+          description="From foundational learning to confident primary education, each programme at Little Gems School is designed to support academic growth, creativity, communication, and overall child development in a nurturing environment."
         />
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {programs.map((program) => (
             <ProgramCard key={program.id} program={program} detailed />
           ))}
