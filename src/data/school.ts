@@ -220,7 +220,7 @@ export const schoolInfo = {
     ] satisfies TimelineStep[],
     documents: [
       "Birth certificate of the child",
-      "Recent passport-size photographs",
+      "Three Recent passport-size photographs ",
       "Address proof of parent or guardian",
       "Aadhaar copy and Samagra id",
       "Transfer certificate for higher classes",
