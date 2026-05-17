@@ -222,8 +222,9 @@ export const schoolInfo = {
       "Birth certificate of the child",
       "Recent passport-size photographs",
       "Address proof of parent or guardian",
-      "Aadhaar copy if available",
-      "Transfer certificate for higher classes if applicable",
+      "Aadhaar copy and Samagra id",
+      "Transfer certificate for higher classes",
+      "Ladli Laxmi Yojna certificate if applicable",
     ],
   },
   facilitiesPage: {
