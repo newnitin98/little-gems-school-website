@@ -124,9 +124,11 @@ export const schoolInfo = {
   about: {
     storyTitle: "Our story",
     story:
-      "Little Gems School was founded to give families in and around Sagda a dependable neighbourhood school where young children can begin their learning journey with confidence. The focus has always been simple: caring attention, clear fundamentals, and a school culture where every child feels noticed.",
+      "LGS is a joyful place where young minds blossom from Pre-Primary to Primary in a warm and caring environment. With dedicated and friendly teachers, we focus on activity-based learning that makes education fun, engaging, and meaningful.",
     storyExtra:
-      "By combining a warm environment with structured teaching, the school helps children build good habits, communication skills, and joyful curiosity in the early years that matter most.",
+      "Our safe and secure campus, conveniently located at Tilwara Road, near Vishal Mega Mart, ensures comfort for both children and parents.",
+    storyClosing:
+      "At LGS, we build strong foundations, encourage creativity, and inspire every child to shine with confidence.",
     vision:
       "To create a nurturing school community where every child discovers confidence, character, and a love for learning.",
     mission:

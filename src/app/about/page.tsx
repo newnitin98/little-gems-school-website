@@ -18,8 +18,8 @@ export default function AboutPage() {
       <SectionWrapper className="bg-primary pt-16 text-white sm:pt-20">
         <SectionHeading
           eyebrow="About Us"
-          title="A neighbourhood school built around care, confidence, and a strong beginning."
-          description="Little Gems School serves families in Sagda and nearby areas with a warm English-medium environment where children feel safe, valued, and ready to learn."
+          title="A Trusted English-Medium School in Jabalpur Focused on Care, Confidence, and Early Learning."
+          description="Little Gems School in Sagda, Jabalpur offers a child-friendly English-medium education designed to support academic growth, creativity, and confidence from an early age. Our safe campus, experienced teachers, and nurturing environment help children develop the skills and values needed for a bright future."
           theme="dark"
         />
       </SectionWrapper>
@@ -33,6 +33,9 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-base leading-8 text-subtext">
               {schoolInfo.about.storyExtra}
+            </p>
+            <p className="mt-4 text-base leading-8 text-subtext">
+              {schoolInfo.about.storyClosing}
             </p>
           </Card>
           <div className="grid gap-5">
