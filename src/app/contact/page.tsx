@@ -77,8 +77,8 @@ export default function ContactPage() {
           <div>
             <SectionHeading
               eyebrow="Find Us"
-              title="Visit the school on Tilwara Road"
-              description="Our location is convenient for families in Sagda and surrounding areas of Jabalpur."
+              title="Visit Our Campus"
+              description="Little Gems School is located in a well-connected and family-friendly area of Jabalpur, offering a safe and welcoming environment for early learning."
             />
             <div className="mt-8">
               <a
