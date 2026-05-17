@@ -11,6 +11,7 @@ type FormValues = {
   classApplying: string;
   phone: string;
   message: string;
+  website: string; // honeypot — must stay empty; hidden from real users
 };
 
 type FormErrors = Partial<Record<keyof FormValues, string>>;
@@ -22,6 +23,7 @@ const initialValues: FormValues = {
   classApplying: "",
   phone: "",
   message: "",
+  website: "", // honeypot — always empty for real users
 };
 
 const classOptions = [
@@ -144,7 +146,7 @@ export function ContactForm() {
       setWhatsappUrl(result.whatsappUrl ?? "");
       setStatus({
         type: "success",
-        message: `Thank you, ${values.parentName}! We've received your enquiry and will call you at ${values.phone} within one school day.`,
+        message: "Thank you! Your enquiry has been submitted successfully. Our admissions team will contact you shortly.",
       });
     } catch (error) {
       console.error(error);
@@ -166,7 +168,7 @@ export function ContactForm() {
       className="rounded-[32px] border border-primary/10 bg-white p-6 shadow-card sm:p-8"
       noValidate
     >
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="relative grid gap-5 sm:grid-cols-2">
         {textFields.map((field) => (
           <label key={field.id} className="space-y-2 text-sm font-medium text-body-text">
             <span>{field.label}</span>
@@ -240,6 +242,18 @@ export function ContactForm() {
             className="w-full rounded-2xl border bg-light-bg px-4 py-3 text-sm outline-none transition focus:border-primary focus:bg-white"
           />
         </label>
+        {/* Honeypot — hidden from real users; bots fill it and get silently blocked */}
+        <label aria-hidden="true" className="absolute -left-[9999px] -top-[9999px] overflow-hidden">
+          <span>Leave this empty</span>
+          <input
+            type="text"
+            name="website"
+            value={values.website}
+            onChange={(e) => handleChange("website", e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
       </div>
 
       <p className="mt-4 text-xs text-subtext">
@@ -256,9 +270,9 @@ export function ContactForm() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-[#25D366] px-5 text-sm font-semibold text-white transition hover:bg-[#128C7E]"
+              className="inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full bg-[#25D366] px-5 text-sm font-semibold text-white transition hover:bg-[#128C7E]"
             >
-              Send via WhatsApp too
+              Chat on WhatsApp
             </a>
           ) : null}
         </div>
