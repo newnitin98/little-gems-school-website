@@ -81,12 +81,21 @@ export default function ContactPage() {
               description="Our location is convenient for families in Sagda and surrounding areas of Jabalpur."
             />
             <div className="mt-8">
+              <a
+                href="https://maps.google.com/?q=Little+Gems+School+Jabalpur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm transition hover:bg-light-bg"
+              >
+                <MapPin className="h-4 w-4 text-accent" />
+                Open in Maps
+              </a>
               <div
                 className="w-full overflow-hidden rounded-xl shadow-md"
                 style={{ height: "380px" }}
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.8!2d79.9864!3d23.1815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDEwJzU0LjAiTiA3OcKwNTknMTEuMCJF!5e0!3m2!1sen!2sin!4v1000000000000!5m2!1sen!2sin&q=Little+Gems+School+Tilwara+Road+Sagda+Jabalpur"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1834.4591096672707!2d79.87553796754858!3d23.13666433396337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b232fb00b01d%3A0x6cee9b610da8f553!2sLittle%20Gems%20School!5e0!3m2!1sen!2sin!4v1779040265618!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
