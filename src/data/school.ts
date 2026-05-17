@@ -291,7 +291,7 @@ export const schoolInfo = {
       },
       {
         title: "School hours",
-        description: "Monday to Saturday, 8:00 AM to 2:30 PM",
+        description: "Monday to Saturday, 8:00 AM to 2:00 PM",
         icon: "clock-3",
       },
     ] satisfies ContactHighlight[],
@@ -303,7 +303,7 @@ export const schoolInfo = {
       "Little Gems School is a caring English-medium school in Jabalpur, helping children grow with confidence from Pre-Primary to Primary.",
     hours: [
       "Monday to Saturday",
-      "8:00 AM to 2:30 PM",
+      "8:00 AM to 2:00 PM",
       "Campus visits by appointment",
     ],
   },
