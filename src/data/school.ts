@@ -85,37 +85,37 @@ export const schoolInfo = {
   },
   whyChooseUs: [
     {
-      title: "Safe and caring environment",
+      title: "Safe and Caring Environment",
       description:
-        "Children learn in a warm setting with attentive supervision, age-appropriate routines, and a reassuring atmosphere.",
+        "Children learn in a warm, supervised setting with age-appropriate routines, care, and a reassuring atmosphere.",
       icon: "shield",
     },
     {
-      title: "Strong English foundation",
+      title: "Strong English Foundation",
       description:
-        "Daily exposure to English speaking, phonics, reading, and classroom communication builds confidence from the start.",
+        "Daily exposure to phonics, reading, speaking, and classroom communication helps children build confidence from the start.",
       icon: "graduation-cap",
     },
     {
-      title: "Activity-based learning",
+      title: "Activity-Based Learning",
       description:
-        "Lessons are brought alive through stories, movement, art, projects, and interactive classroom experiences.",
+        "Lessons come alive through stories, creative activities, hands-on tasks, and interactive classroom experiences.",
       icon: "sparkles",
     },
     {
-      title: "Child-friendly campus",
+      title: "Child-Friendly Campus",
       description:
-        "Bright classrooms, play areas, and practical learning corners help children feel at ease and eager to participate.",
+        "Bright classrooms, play areas, and practical learning corners help children feel comfortable and eager to participate.",
       icon: "trees",
     },
     {
-      title: "Teacher-parent connection",
+      title: "Teacher–Parent Communication",
       description:
-        "We believe regular communication with families is essential for a child's confidence and steady progress.",
+        "Regular updates, meetings, and open communication help parents stay involved in every child's learning progress.",
       icon: "users",
     },
     {
-      title: "Value-based growth",
+      title: "Value-Based Growth",
       description:
         "Respect, discipline, kindness, and responsibility are gently built into everyday school life.",
       icon: "badge-check",
@@ -316,17 +316,17 @@ export const schoolInfo = {
     {
       platform: "instagram",
       label: "Instagram",
-      href: "https://www.instagram.com/littlegemsschool.in",
+      href: "https://www.instagram.com/slittlegems?utm_source=qr&igsh=bXc2azE0ZjJwb3Rr",
     },
     {
       platform: "facebook",
       label: "Facebook",
-      href: "https://www.facebook.com/littlegemsschool.in",
+      href: "https://www.facebook.com/groups/849457906497895/",
     },
     {
       platform: "youtube",
       label: "YouTube",
-      href: "https://www.youtube.com/@littlegemsschool",
+      href: "https://www.youtube.com/@ankitakhare1758",
     },
   ] satisfies SocialLink[],
 } as const;

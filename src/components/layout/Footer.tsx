@@ -86,9 +86,19 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-sm text-white/65 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:pl-8 lg:pr-44">
           <p>© {new Date().getFullYear()} {schoolInfo.name}. All rights reserved.</p>
-          <p>Designed for families seeking a joyful start to learning.</p>
+          <p>
+            Website designed and developed by{" "}
+            <a
+              href="https://pixelniti.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 transition hover:text-white/90"
+            >
+              PixelNiti
+            </a>
+          </p>
         </div>
       </div>
     </footer>
