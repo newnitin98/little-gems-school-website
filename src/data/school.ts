@@ -134,10 +134,14 @@ export const schoolInfo = {
     mission:
       "To provide quality English-medium education with personal attention, strong foundational skills, and meaningful experiences that help children grow academically, socially, and emotionally.",
     principal: {
-      name: "Mrs. Kavita Sharma",
+      name: "Mrs. Deepika Choudhary",
       title: "Principal, Little Gems School",
       message:
-        "At Little Gems School, we believe the early years shape how children see themselves as learners. Our aim is to make each school day secure, joyful, and full of meaningful progress. We work closely with parents so every child receives the encouragement, routine, and opportunities needed to shine with confidence.",
+        "Welcome to our Little Gems School family. For the past 18 years, our school has been dedicated to nurturing young minds with love, care, and quality education. We believe that early childhood is the most important stage of learning, where children develop confidence, creativity, curiosity, and strong values.",
+      messageExtra:
+        "Our aim is to provide a safe, joyful, and stimulating environment where every child feels happy, respected, and encouraged to explore their unique talents. We focus on holistic development through activity-based learning, moral values, discipline, and playful experiences that make learning meaningful and enjoyable.",
+      messageClosing:
+        "We are grateful to all parents for their continuous trust and support throughout this beautiful journey of 18 years. Together, we will continue shaping bright futures and helping our little learners grow into confident and responsible individuals.",
     },
     coreValues: [
       {
