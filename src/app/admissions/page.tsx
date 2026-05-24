@@ -9,7 +9,7 @@ import { schoolInfo } from "@/data/school";
 export const metadata = {
   title: "Admissions 2026-27",
   description:
-    "Admissions are open at Little Gems School Jabalpur for 2026-27. Pre-Nursery to Class 5. Learn the process, documents required, and age criteria.",
+    "Admissions are open at Little Gems School Jabalpur for 2026-27. Play-Nursery to Class 5. Learn the process, documents required, and eligibility criteria.",
   alternates: { canonical: "https://www.littlegemsschool.in/admissions" },
 };
 
@@ -20,14 +20,14 @@ export default function AdmissionsPage() {
         <SectionHeading
           eyebrow="Admissions"
           title="Admissions open for children ready to learn, play, and grow."
-          description="We welcome families looking for a caring English-medium school experience from Pre-Nursery to Class 5."
+          description="We welcome families looking for a caring English-medium school experience from Play-Nursery to Class 5."
           theme="dark"
         />
       </SectionWrapper>
 
       <SectionWrapper>
         <Card className="border-secondary/30 bg-secondary/15 p-6 sm:p-8">
-          <p className="font-heading text-2xl font-semibold text-primary">
+          <p className="font-heading text-lg font-semibold text-primary sm:text-xl [text-wrap:balance]">
             {schoolInfo.admissionsPage.statusBanner}
           </p>
         </Card>
@@ -36,22 +36,30 @@ export default function AdmissionsPage() {
           <div>
             <SectionHeading
               eyebrow="Eligibility"
-              title="Class-wise age guidance"
-              description="Age ranges are shared to help families understand the most suitable entry point."
+              title="Class-wise eligibility guide"
+              description="Use this as a quick reference to find the right starting point for your child. Our team is happy to help if you have any questions."
             />
             <div className="mt-8 overflow-hidden rounded-[28px] border border-primary/10 bg-white shadow-card">
               <table className="w-full text-left">
                 <thead className="bg-light-bg">
                   <tr>
-                    <th className="px-5 py-4 font-heading text-lg text-primary">Class</th>
-                    <th className="px-5 py-4 font-heading text-lg text-primary">Age Range</th>
+                    <th className="px-6 py-5 font-heading text-base font-semibold uppercase tracking-wide text-primary">Class</th>
+                    <th className="px-6 py-5 font-heading text-base font-semibold uppercase tracking-wide text-primary">Eligibility</th>
                   </tr>
                 </thead>
                 <tbody>
                   {schoolInfo.admissionsPage.eligibility.map((row) => (
-                    <tr key={row.className} className="border-t border-primary/10">
-                      <td className="px-5 py-4 text-body-text">{row.className}</td>
-                      <td className="px-5 py-4 text-subtext">{row.age}</td>
+                    <tr key={row.className} className="border-t border-primary/8 transition-colors hover:bg-light-bg/60">
+                      <td className="px-6 py-5 font-medium text-body-text">{row.className}</td>
+                      <td className="px-6 py-5">
+                        {row.age === "Age-appropriate admission" ? (
+                          <span className="font-medium text-primary/55 italic">
+                            Age-appropriate admission
+                          </span>
+                        ) : (
+                          <span className="font-semibold text-primary">{row.age}</span>
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

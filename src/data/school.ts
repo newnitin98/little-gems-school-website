@@ -46,7 +46,7 @@ export const schoolInfo = {
   address: "Tilwara Road, Sagda, Jabalpur, Madhya Pradesh",
   phoneNumbers: ["8839225491", "9399098220"],
   whatsappNumber: "918839225491",
-  admissions: "Open for 2026-27, Pre-Nursery to Class 5",
+  admissions: "Open for 2026-27, Play-Nursery to Class 5",
   hero: {
     eyebrow: "Admissions Open 2026-27",
     headline: "A joyful English-medium school in Jabalpur for curious young minds.",
@@ -55,7 +55,7 @@ export const schoolInfo = {
     primaryCta: { label: "Apply Now", href: "/admissions" },
     secondaryCta: { label: "Book a School Visit", href: "/contact" },
     highlights: [
-      "Pre-Nursery to Class 5",
+      "Play-Nursery to Class 5",
       "Activity-based English-medium learning",
       "Safe, welcoming campus on Tilwara Road",
     ],
@@ -187,13 +187,13 @@ export const schoolInfo = {
   },
   admissionsPage: {
     statusBanner:
-      "Admissions are currently open for the 2026-27 academic session from Pre-Nursery to Class 5.",
+      "Admissions are currently open for the 2026-27 academic session from Play-Nursery to Class 5.",
     eligibility: [
-      { className: "Pre-Nursery", age: "2.5 to 3.5 years" },
-      { className: "Nursery", age: "3.5 to 4.5 years" },
-      { className: "KG", age: "4.5 to 5.5 years" },
-      { className: "Class 1 to 3", age: "5.5 to 8 years" },
-      { className: "Class 4 to 5", age: "8 to 10 years" },
+      { className: "Play-Nursery", age: "2.5 Years Onwards" },
+      { className: "Nursery", age: "3+ Years" },
+      { className: "KG", age: "4+ Years" },
+      { className: "Classes 1–3", age: "Age-appropriate admission" },
+      { className: "Classes 4–5", age: "Age-appropriate admission" },
     ],
     process: [
       {
