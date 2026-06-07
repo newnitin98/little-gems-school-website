@@ -191,7 +191,7 @@ export const schoolInfo = {
     eligibility: [
       { className: "Play-Nursery", age: "2.5 Years Onwards" },
       { className: "Nursery", age: "3+ Years" },
-      { className: "KG", age: "4+ Years" },
+      { className: "KG", age: "Age-appropriate admission" },
       { className: "Classes 1–3", age: "Age-appropriate admission" },
       { className: "Classes 4–5", age: "Age-appropriate admission" },
     ],
