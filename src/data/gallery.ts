@@ -38,8 +38,8 @@ export const galleryItems: GalleryItem[] = [
     id: "sports-play",
     title: "Play and Movement Time",
     category: "Activities",
-    image: "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=800&q=80",
-    alt: "Students enjoying movement and outdoor play time at Little Gems School",
+    image: "/images/gallery/activities-play.png",
+    alt: "Little Gems School students enjoying outdoor play time on the school playground",
   },
   {
     id: "storybook-corner",

@@ -31,9 +31,9 @@ export const facilities = [
     title: "Play Area",
     summary:
       "Outdoor play zones where children can move freely, build confidence, and enjoy group play.",
-    image: "https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?auto=format&fit=crop&w=900&q=80",
+    image: "/images/gallery/activities-play.png",
     imageLabel: "Play Area",
-    alt: "Safe outdoor play area for children at Little Gems School",
+    alt: "Little Gems School students enjoying outdoor play time on the school playground",
   },
   {
     id: "library-nook",
