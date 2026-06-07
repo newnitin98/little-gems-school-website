@@ -6,7 +6,7 @@ export function AdmissionsStrip() {
 
   return (
     <div className="border-b border-secondary/20 bg-secondary text-primary">
-      <div className="mx-auto hidden max-w-7xl items-center justify-center gap-3 px-4 py-2 text-center text-sm font-semibold sm:flex">
+      <div className="mx-auto hidden max-w-7xl items-center justify-center gap-3 px-4 py-2 text-center text-sm font-semibold sm:flex lg:text-base lg:font-bold">
         <Phone className="h-4 w-4" />
         <span>{stripText}</span>
         <span className="ml-1 rounded-full bg-accent/20 px-3 py-0.5 text-xs font-bold text-accent">

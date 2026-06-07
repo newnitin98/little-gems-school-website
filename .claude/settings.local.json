@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(powershell -Command \"Get-ChildItem little-gems-brand-assets/ | Select-Object Name, Length\")"
     ]
   }
 }
