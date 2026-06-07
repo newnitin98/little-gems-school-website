@@ -15,10 +15,10 @@ export type GalleryItem = {
 export const galleryItems: GalleryItem[] = [
   {
     id: "welcome-campus",
-    title: "Welcoming School Entrance",
+    title: "Little Gems School – Main Building",
     category: "Campus",
-    image: "https://images.unsplash.com/photo-1541178735493-479c1a27ed24?auto=format&fit=crop&w=800&q=80",
-    alt: "Young students enjoying the outdoor play zone at Little Gems School",
+    image: "/images/gallery/school-main-building.png",
+    alt: "Front view of the Little Gems School main building on Tilwara Road, Sagda, Jabalpur",
   },
   {
     id: "happy-classroom",
