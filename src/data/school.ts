@@ -295,8 +295,9 @@ export const schoolInfo = {
         href: "tel:918839225491",
       },
       {
-        title: "School hours",
-        description: "Monday to Saturday, 8:00 AM to 2:00 PM",
+        title: "School Timings",
+        description:
+          "Nursery: 9:00 AM to 12:30 PM\nPrimary: 8:00 AM to 1:50 PM",
         icon: "clock-3",
       },
     ] satisfies ContactHighlight[],

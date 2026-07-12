@@ -64,6 +64,7 @@ export function GalleryGrid({ items, categories }: GalleryGridProps) {
                 loading="lazy"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition duration-500 group-hover:scale-105"
+                style={{ objectPosition: item.focalPoint ?? "50% 50%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-primary/10 to-transparent" />
               <div className="absolute bottom-0 left-0 p-5 text-white">

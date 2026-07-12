@@ -52,7 +52,7 @@ export default function ContactPage() {
                     {card.description}
                   </a>
                 ) : (
-                  <p className="mt-4 text-base leading-7 text-subtext">
+                  <p className="mt-4 whitespace-pre-line text-base leading-7 text-subtext">
                     {card.description}
                   </p>
                 )}

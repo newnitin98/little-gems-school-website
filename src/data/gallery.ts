@@ -13,6 +13,7 @@ export type GalleryItem = {
   alt: string;
   featuredOnHome?: boolean;
   displayOrder?: number;
+  focalPoint?: string;
 };
 
 export const galleryItems: GalleryItem[] = [
@@ -25,6 +26,7 @@ export const galleryItems: GalleryItem[] = [
       "Our purpose-built campus on Tilwara Road offers a bright, welcoming setting for young learners.",
     alt: "Front view of the Little Gems School main building on Tilwara Road, Sagda, Jabalpur",
     displayOrder: 1,
+    focalPoint: "50% 40%",
   },
   {
     id: "campus-safe",
@@ -35,6 +37,7 @@ export const galleryItems: GalleryItem[] = [
       "Secure entry routines and attentive supervision help every child feel safe throughout the school day.",
     alt: "Students walking safely inside the Little Gems School campus",
     displayOrder: 2,
+    focalPoint: "50% 50%",
   },
   {
     id: "classroom-focused-learning",
@@ -46,6 +49,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students engaged in a focused classroom lesson",
     featuredOnHome: true,
     displayOrder: 3,
+    focalPoint: "55% 50%",
   },
   {
     id: "classroom-reading",
@@ -57,6 +61,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students reading and building language skills in the classroom",
     featuredOnHome: true,
     displayOrder: 4,
+    focalPoint: "50% 55%",
   },
   {
     id: "classroom-creative-activity",
@@ -68,6 +73,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students taking part in a creative classroom activity",
     featuredOnHome: true,
     displayOrder: 5,
+    focalPoint: "50% 30%",
   },
   {
     id: "classroom-computer",
@@ -79,6 +85,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students learning in the computer room",
     featuredOnHome: true,
     displayOrder: 6,
+    focalPoint: "50% 55%",
   },
   {
     id: "classroom-bright",
@@ -89,6 +96,7 @@ export const galleryItems: GalleryItem[] = [
       "Well-lit, ventilated classrooms create a comfortable environment for concentration and learning.",
     alt: "Bright classroom at Little Gems School prepared for young students",
     displayOrder: 7,
+    focalPoint: "50% 50%",
   },
   {
     id: "activity-art-craft",
@@ -100,6 +108,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School children creating art and craft together",
     featuredOnHome: true,
     displayOrder: 8,
+    focalPoint: "50% 30%",
   },
   {
     id: "activity-art-creativity",
@@ -111,6 +120,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students enjoying an art and creativity session",
     featuredOnHome: true,
     displayOrder: 9,
+    focalPoint: "50% 50%",
   },
   {
     id: "activity-group-learning",
@@ -122,6 +132,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students working together on a group activity",
     featuredOnHome: true,
     displayOrder: 10,
+    focalPoint: "50% 35%",
   },
   {
     id: "activity-interactive",
@@ -132,6 +143,7 @@ export const galleryItems: GalleryItem[] = [
       "Interactive activity zones make everyday learning playful and memorable.",
     alt: "Little Gems School children in an interactive learning activity",
     displayOrder: 11,
+    focalPoint: "50% 50%",
   },
   {
     id: "activity-art-corner",
@@ -142,6 +154,7 @@ export const galleryItems: GalleryItem[] = [
       "A dedicated creative corner in every classroom invites children to draw, build, and imagine.",
     alt: "Little Gems School creative corner where children work on art activities",
     displayOrder: 12,
+    focalPoint: "50% 50%",
   },
   {
     id: "celebration-annual-day",
@@ -153,6 +166,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students performing on Annual Day",
     featuredOnHome: true,
     displayOrder: 13,
+    focalPoint: "50% 70%",
   },
   {
     id: "celebration-annual-day-2",
@@ -163,6 +177,7 @@ export const galleryItems: GalleryItem[] = [
       "Colourful stage performances celebrate the effort and confidence of every child.",
     alt: "Little Gems School Annual Day celebration on stage",
     displayOrder: 14,
+    focalPoint: "50% 50%",
   },
   {
     id: "celebration-festival",
@@ -174,6 +189,7 @@ export const galleryItems: GalleryItem[] = [
     alt: "Little Gems School students celebrating a festival together",
     featuredOnHome: true,
     displayOrder: 15,
+    focalPoint: "50% 65%",
   },
 ];
 

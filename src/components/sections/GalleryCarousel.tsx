@@ -121,6 +121,7 @@ export function GalleryCarousel({ items }: GalleryCarouselProps) {
                 priority={index === 0}
                 loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover"
+                style={{ objectPosition: item.focalPoint ?? "50% 50%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/40 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8 lg:p-10">
