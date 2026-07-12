@@ -40,16 +40,16 @@ export const facilities = [
     title: "Reading Nook",
     summary:
       "A child-friendly reading area that encourages imagination, vocabulary growth, and quiet discovery.",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=900&q=80",
+    image: "/images/school/hero-students-reading.jpeg",
     imageLabel: "Reading Nook",
-    alt: "Reading nook with storybooks for students at Little Gems School",
+    alt: "Little Gems School students focused on reading and writing in the classroom",
   },
   {
     id: "safe-campus",
     title: "Safe Campus",
     summary:
       "Secure entry management, attentive supervision, and age-appropriate routines throughout the day.",
-    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=900&q=80",
+    image: "/images/gallery/safe campus.jpeg",
     imageLabel: "Safe Campus",
     alt: "Safe and supervised campus environment at Little Gems School",
   },

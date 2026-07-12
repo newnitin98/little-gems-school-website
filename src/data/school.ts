@@ -59,9 +59,9 @@ export const schoolInfo = {
       "Activity-based English-medium learning",
       "Safe, welcoming campus on Tilwara Road",
     ],
-    image: "/images/school/hero-students-reading.jpeg",
+    image: "/images/gallery/school-main-building.png",
     imageAlt:
-      "Little Gems School students focused on reading books in the classroom",
+      "Front view of the Little Gems School main building on Tilwara Road, Sagda, Jabalpur",
   },
   homepageIntro: {
     whyChooseUsTitle: "Why parents choose Little Gems School",
