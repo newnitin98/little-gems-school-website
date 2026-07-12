@@ -58,7 +58,7 @@ export function GalleryGrid({ items, categories }: GalleryGridProps) {
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-light-bg">
               <Image
-                src={item.image}
+                src={item.src}
                 alt={item.alt}
                 fill
                 loading="lazy"
@@ -98,7 +98,7 @@ export function GalleryGrid({ items, categories }: GalleryGridProps) {
             </div>
             <div className="relative aspect-[16/10] overflow-hidden rounded-[32px] border border-white/10 bg-white/10">
               <Image
-                src={selectedItem.image}
+                src={selectedItem.src}
                 alt={selectedItem.alt}
                 fill
                 sizes="100vw"

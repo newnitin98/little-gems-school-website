@@ -6,75 +6,174 @@ export type GalleryCategory =
 
 export type GalleryItem = {
   id: string;
-  title: string;
+  src: string;
   category: GalleryCategory;
-  image: string;
+  title: string;
+  description: string;
   alt: string;
+  featuredOnHome?: boolean;
+  displayOrder?: number;
 };
 
 export const galleryItems: GalleryItem[] = [
   {
-    id: "welcome-campus",
+    id: "campus-main-building",
+    src: "/images/gallery/campus/school-main-building.png",
+    category: "Campus",
     title: "Little Gems School – Main Building",
-    category: "Campus",
-    image: "/images/gallery/school-main-building.png",
+    description:
+      "Our purpose-built campus on Tilwara Road offers a bright, welcoming setting for young learners.",
     alt: "Front view of the Little Gems School main building on Tilwara Road, Sagda, Jabalpur",
+    displayOrder: 1,
   },
   {
-    id: "happy-classroom",
-    title: "Interactive Classroom Session",
-    category: "Classrooms",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80",
-    alt: "Students taking part in an interactive classroom lesson at Little Gems School",
-  },
-  {
-    id: "art-activity",
-    title: "Creative Art Activity",
-    category: "Activities",
-    image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80",
-    alt: "Children engaged in a creative art and craft session at Little Gems School",
-  },
-  {
-    id: "sports-play",
-    title: "Play and Movement Time",
-    category: "Activities",
-    image: "/images/gallery/activities-play.png",
-    alt: "Little Gems School students enjoying outdoor play time on the school playground",
-  },
-  {
-    id: "storybook-corner",
-    title: "Storybook Corner",
-    category: "Classrooms",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
-    alt: "Children reading together in a calm classroom corner at Little Gems School",
-  },
-  {
-    id: "annual-day",
-    title: "Annual Day Performance",
-    category: "Celebrations",
-    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800&q=80",
-    alt: "Students smiling together during a special school celebration at Little Gems School",
-  },
-  {
-    id: "morning-assembly",
-    title: "Morning Assembly",
+    id: "campus-safe",
+    src: "/images/gallery/campus/Safe campus.jpeg",
     category: "Campus",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
-    alt: "Students gathered together for the start of the school day at Little Gems School",
+    title: "Safe and Welcoming Campus",
+    description:
+      "Secure entry routines and attentive supervision help every child feel safe throughout the school day.",
+    alt: "Students walking safely inside the Little Gems School campus",
+    displayOrder: 2,
   },
   {
-    id: "festival-celebration",
-    title: "Festival Celebration",
-    category: "Celebrations",
-    image: "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80",
-    alt: "Children participating in a joyful classroom celebration at Little Gems School",
-  },
-  {
-    id: "handwriting-practice",
-    title: "Focused Handwriting Practice",
+    id: "classroom-focused-learning",
+    src: "/images/gallery/Classrooms/classrom_1.jpeg",
     category: "Classrooms",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80",
-    alt: "Students concentrating during a guided writing session at Little Gems School",
+    title: "Focused Classroom Learning",
+    description:
+      "Small-group attention and calm classrooms help children concentrate and enjoy learning.",
+    alt: "Little Gems School students engaged in a focused classroom lesson",
+    featuredOnHome: true,
+    displayOrder: 3,
+  },
+  {
+    id: "classroom-reading",
+    src: "/images/gallery/Classrooms/Classroom_Image.jpeg",
+    category: "Classrooms",
+    title: "Reading and Language Development",
+    description:
+      "Daily reading and speaking activities build confident communication from an early age.",
+    alt: "Little Gems School students reading and building language skills in the classroom",
+    featuredOnHome: true,
+    displayOrder: 4,
+  },
+  {
+    id: "classroom-creative-activity",
+    src: "/images/gallery/Classrooms/Classrom activity.jpeg",
+    category: "Classrooms",
+    title: "Creative Classroom Activity",
+    description:
+      "Hands-on classroom activities keep young learners engaged, curious, and confident.",
+    alt: "Little Gems School students taking part in a creative classroom activity",
+    featuredOnHome: true,
+    displayOrder: 5,
+  },
+  {
+    id: "classroom-computer",
+    src: "/images/gallery/Classrooms/computer room.jpeg",
+    category: "Classrooms",
+    title: "Computer Learning",
+    description:
+      "Structured computer sessions introduce children to essential digital skills from primary onward.",
+    alt: "Little Gems School students learning in the computer room",
+    featuredOnHome: true,
+    displayOrder: 6,
+  },
+  {
+    id: "classroom-bright",
+    src: "/images/gallery/Classrooms/bright classroom.jpeg",
+    category: "Classrooms",
+    title: "Bright, Airy Classroom",
+    description:
+      "Well-lit, ventilated classrooms create a comfortable environment for concentration and learning.",
+    alt: "Bright classroom at Little Gems School prepared for young students",
+    displayOrder: 7,
+  },
+  {
+    id: "activity-art-craft",
+    src: "/images/gallery/activities/Art and Craft.jpeg",
+    category: "Activities",
+    title: "Creative Art and Craft",
+    description:
+      "Art and craft sessions build fine motor skills, imagination, and self-expression.",
+    alt: "Little Gems School children creating art and craft together",
+    featuredOnHome: true,
+    displayOrder: 8,
+  },
+  {
+    id: "activity-art-creativity",
+    src: "/images/gallery/activities/Art and creativitity.jpeg",
+    category: "Activities",
+    title: "Art and Creativity Time",
+    description:
+      "Dedicated creativity time encourages children to explore colour, texture, and ideas.",
+    alt: "Little Gems School students enjoying an art and creativity session",
+    featuredOnHome: true,
+    displayOrder: 9,
+  },
+  {
+    id: "activity-group-learning",
+    src: "/images/gallery/activities/Activities_Images_1.jpeg",
+    category: "Activities",
+    title: "Group Learning Activity",
+    description:
+      "Collaborative activities teach children to listen, take turns, and learn from one another.",
+    alt: "Little Gems School students working together on a group activity",
+    featuredOnHome: true,
+    displayOrder: 10,
+  },
+  {
+    id: "activity-interactive",
+    src: "/images/gallery/activities/Activities_Images.jpeg",
+    category: "Activities",
+    title: "Interactive Learning Session",
+    description:
+      "Interactive activity zones make everyday learning playful and memorable.",
+    alt: "Little Gems School children in an interactive learning activity",
+    displayOrder: 11,
+  },
+  {
+    id: "activity-art-corner",
+    src: "/images/gallery/activities/Art and creative Corner.jpeg",
+    category: "Activities",
+    title: "Art and Creative Corner",
+    description:
+      "A dedicated creative corner in every classroom invites children to draw, build, and imagine.",
+    alt: "Little Gems School creative corner where children work on art activities",
+    displayOrder: 12,
+  },
+  {
+    id: "celebration-annual-day",
+    src: "/images/gallery/celebrations/Annual Day.jpeg",
+    category: "Celebrations",
+    title: "Annual Day Performance",
+    description:
+      "Our Annual Day brings students, teachers, and families together for performances and pride.",
+    alt: "Little Gems School students performing on Annual Day",
+    featuredOnHome: true,
+    displayOrder: 13,
+  },
+  {
+    id: "celebration-annual-day-2",
+    src: "/images/gallery/celebrations/Annual day 2.jpeg",
+    category: "Celebrations",
+    title: "Annual Day Celebration",
+    description:
+      "Colourful stage performances celebrate the effort and confidence of every child.",
+    alt: "Little Gems School Annual Day celebration on stage",
+    displayOrder: 14,
+  },
+  {
+    id: "celebration-festival",
+    src: "/images/gallery/celebrations/Celebration.jpeg",
+    category: "Celebrations",
+    title: "Festival Celebration",
+    description:
+      "Festival celebrations at school help children learn cultural values and enjoy shared traditions.",
+    alt: "Little Gems School students celebrating a festival together",
+    featuredOnHome: true,
+    displayOrder: 15,
   },
 ];
 
