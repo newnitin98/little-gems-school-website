@@ -5,6 +5,7 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { FacilitiesGrid } from "@/components/sections/FacilitiesGrid";
 import { GalleryPreview } from "@/components/sections/GalleryPreview";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { HonestyCounter } from "@/components/sections/HonestyCounter";
 import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { faqs } from "@/data/faqs";
@@ -50,6 +51,7 @@ export default function HomePage() {
       <AcademicsPreview />
       <FacilitiesGrid />
       <GalleryPreview />
+      <HonestyCounter />
       <TestimonialCarousel />
       <FAQAccordion />
       <CTABand
