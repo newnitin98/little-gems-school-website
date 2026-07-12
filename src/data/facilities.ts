@@ -13,7 +13,7 @@ export const facilities = [
     title: "Bright Classrooms",
     summary:
       "Well-lit, airy rooms designed to help young learners feel focused, comfortable, and engaged.",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80",
+    image: "/images/gallery/bright classroom.jpeg",
     imageLabel: "Classrooms",
     alt: "Bright classroom at Little Gems School prepared for primary students",
   },
@@ -22,7 +22,7 @@ export const facilities = [
     title: "Activity Corners",
     summary:
       "Hands-on learning spaces for puzzles, art, storytelling, and collaborative activities.",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+    image: "/images/gallery/Activity Corners.jpeg",
     imageLabel: "Activity Zone",
     alt: "Activity corner for pre-primary children at Little Gems School",
   },
@@ -58,7 +58,7 @@ export const facilities = [
     title: "Assembly & Events Space",
     summary:
       "Flexible open areas for celebrations, morning assembly, performances, and school showcases.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80",
+    image: "/images/gallery/Event space.jpeg",
     imageLabel: "Events Space",
     alt: "School events and assembly space at Little Gems School",
   },
