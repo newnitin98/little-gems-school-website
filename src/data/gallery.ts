@@ -99,6 +99,42 @@ export const galleryItems: GalleryItem[] = [
     focalPoint: "50% 50%",
   },
   {
+    id: "activity-play-area-fun",
+    src: "/images/gallery/activities/Play Area_1.jpeg",
+    category: "Activities",
+    title: "Play Area Fun",
+    description:
+      "Students take turns on the slide, learning coordination, patience, and playful teamwork.",
+    alt: "Little Gems School students enjoying the play area at Little Gems School",
+    featuredOnHome: true,
+    displayOrder: 8,
+    focalPoint: "50% 55%",
+  },
+  {
+    id: "activity-learning-through-play",
+    src: "/images/gallery/activities/Play Area 2.jpeg",
+    category: "Activities",
+    title: "Learning Through Play",
+    description:
+      "Cheerful outdoor play helps children build confidence and lasting friendships.",
+    alt: "Little Gems School children enjoying the outdoor play area with a thumbs-up",
+    featuredOnHome: true,
+    displayOrder: 9,
+    focalPoint: "50% 45%",
+  },
+  {
+    id: "activity-honesty-counter",
+    src: "/images/gallery/activities/Honesty Counter.jpeg",
+    category: "Activities",
+    title: "Honesty Counter",
+    description:
+      "Our trust-based Honesty Counter teaches children responsibility and integrity every day.",
+    alt: "Little Gems School students using the trust-based Honesty Counter",
+    featuredOnHome: true,
+    displayOrder: 10,
+    focalPoint: "50% 55%",
+  },
+  {
     id: "activity-art-craft",
     src: "/images/gallery/activities/Art and Craft.jpeg",
     category: "Activities",
@@ -107,7 +143,7 @@ export const galleryItems: GalleryItem[] = [
       "Art and craft sessions build fine motor skills, imagination, and self-expression.",
     alt: "Little Gems School children creating art and craft together",
     featuredOnHome: true,
-    displayOrder: 8,
+    displayOrder: 11,
     focalPoint: "50% 30%",
   },
   {
@@ -118,8 +154,7 @@ export const galleryItems: GalleryItem[] = [
     description:
       "Dedicated creativity time encourages children to explore colour, texture, and ideas.",
     alt: "Little Gems School students enjoying an art and creativity session",
-    featuredOnHome: true,
-    displayOrder: 9,
+    displayOrder: 12,
     focalPoint: "50% 50%",
   },
   {
@@ -130,8 +165,7 @@ export const galleryItems: GalleryItem[] = [
     description:
       "Collaborative activities teach children to listen, take turns, and learn from one another.",
     alt: "Little Gems School students working together on a group activity",
-    featuredOnHome: true,
-    displayOrder: 10,
+    displayOrder: 13,
     focalPoint: "50% 35%",
   },
   {
@@ -142,7 +176,7 @@ export const galleryItems: GalleryItem[] = [
     description:
       "Interactive activity zones make everyday learning playful and memorable.",
     alt: "Little Gems School children in an interactive learning activity",
-    displayOrder: 11,
+    displayOrder: 14,
     focalPoint: "50% 50%",
   },
   {
@@ -153,7 +187,7 @@ export const galleryItems: GalleryItem[] = [
     description:
       "A dedicated creative corner in every classroom invites children to draw, build, and imagine.",
     alt: "Little Gems School creative corner where children work on art activities",
-    displayOrder: 12,
+    displayOrder: 15,
     focalPoint: "50% 50%",
   },
   {
@@ -165,8 +199,76 @@ export const galleryItems: GalleryItem[] = [
       "Our Annual Day brings students, teachers, and families together for performances and pride.",
     alt: "Little Gems School students performing on Annual Day",
     featuredOnHome: true,
-    displayOrder: 13,
+    displayOrder: 16,
     focalPoint: "50% 70%",
+  },
+  {
+    id: "celebration-classical-dance",
+    src: "/images/gallery/celebrations/Annual Day 9.jpeg",
+    category: "Celebrations",
+    title: "Classical Dance Performance",
+    description:
+      "Students take the stage with a graceful classical dance, celebrating culture and confidence.",
+    alt: "Little Gems School student performing a classical dance at Annual Day",
+    featuredOnHome: true,
+    displayOrder: 17,
+    focalPoint: "50% 40%",
+  },
+  {
+    id: "celebration-cultural-programme",
+    src: "/images/gallery/celebrations/Annual Day 8.jpeg",
+    category: "Celebrations",
+    title: "Cultural Programme",
+    description:
+      "A vibrant cultural programme brings colour, music, and energy to the Annual Day stage.",
+    alt: "Little Gems School students performing during the Annual Day cultural programme",
+    featuredOnHome: true,
+    displayOrder: 18,
+    focalPoint: "50% 70%",
+  },
+  {
+    id: "celebration-dance-performance",
+    src: "/images/gallery/celebrations/Annual Day 3.jpeg",
+    category: "Celebrations",
+    title: "Dance Performance",
+    description:
+      "Energetic dance performances light up the Annual Day stage with sparklers and smiles.",
+    alt: "Little Gems School students performing a dance with sparklers on Annual Day",
+    displayOrder: 19,
+    focalPoint: "50% 65%",
+  },
+  {
+    id: "celebration-young-stars",
+    src: "/images/gallery/celebrations/Annual Day 4.jpeg",
+    category: "Celebrations",
+    title: "Young Stars on Stage",
+    description:
+      "Pre-primary students shine in colourful traditional attire during an Annual Day performance.",
+    alt: "Young Little Gems School students in traditional attire dancing on Annual Day",
+    displayOrder: 20,
+    focalPoint: "50% 45%",
+  },
+  {
+    id: "celebration-stage-presentation",
+    src: "/images/gallery/celebrations/Annual Day 5.jpeg",
+    category: "Celebrations",
+    title: "Stage Presentation",
+    description:
+      "Students present a synchronised performance on the Annual Day stage.",
+    alt: "Little Gems School students in a coordinated stage presentation on Annual Day",
+    displayOrder: 21,
+    focalPoint: "50% 60%",
+  },
+  {
+    id: "celebration-celebrating-talent",
+    src: "/images/gallery/celebrations/Annual Day 7.jpeg",
+    category: "Celebrations",
+    title: "Celebrating Talent",
+    description:
+      "Boys perform a lively dance number, celebrating confidence and teamwork on stage.",
+    alt: "Little Gems School boys performing a group dance on Annual Day",
+    displayOrder: 22,
+    focalPoint: "50% 45%",
   },
   {
     id: "celebration-annual-day-2",
@@ -176,7 +278,7 @@ export const galleryItems: GalleryItem[] = [
     description:
       "Colourful stage performances celebrate the effort and confidence of every child.",
     alt: "Little Gems School Annual Day celebration on stage",
-    displayOrder: 14,
+    displayOrder: 23,
     focalPoint: "50% 50%",
   },
   {
@@ -188,7 +290,7 @@ export const galleryItems: GalleryItem[] = [
       "Festival celebrations at school help children learn cultural values and enjoy shared traditions.",
     alt: "Little Gems School students celebrating a festival together",
     featuredOnHome: true,
-    displayOrder: 15,
+    displayOrder: 24,
     focalPoint: "50% 65%",
   },
 ];
