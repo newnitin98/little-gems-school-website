@@ -1,3 +1,4 @@
+import { AchievementPopup } from "@/components/AchievementPopup";
 import { AdmissionsStrip } from "@/components/layout/AdmissionsStrip";
 import { AcademicsPreview } from "@/components/sections/AcademicsPreview";
 import { CTABand } from "@/components/sections/CTABand";
@@ -28,6 +29,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <AchievementPopup />
       <AdmissionsStrip />
       <HeroSection />
       <WhyChooseUs />
