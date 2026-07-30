@@ -52,7 +52,7 @@ export function Navbar() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
             {navigationLinks.map((link) => (
               <Link
                 key={link.href}

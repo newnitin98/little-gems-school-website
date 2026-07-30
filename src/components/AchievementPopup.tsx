@@ -4,30 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { Sparkles, Trophy, X } from "lucide-react";
+import { achievementAlt, featuredAchievements } from "@/data/achievements";
 
 const SESSION_KEY = "lgs-achievement-popup-dismissed-2026-sof-hindi-v1";
 const APPEAR_DELAY_MS = 2500;
 
-type Achiever = {
-  name: string;
-  className?: string;
-  image: string;
-  alt: string;
-};
-
-const achievers: Achiever[] = [
-  {
-    name: "Vedika Mourya",
-    className: "Class 5",
-    image: "/images/achievements/vedika-mourya.jpeg",
-    alt: "Vedika Mourya holding her SOF Hindi Olympiad medal at Little Gems School",
-  },
-  {
-    name: "Hansika Patel",
-    image: "/images/achievements/hansika-patel.jpeg",
-    alt: "Hansika Patel holding her SOF Hindi Olympiad medal at Little Gems School",
-  },
-];
+const achievers = featuredAchievements;
 
 export function AchievementPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -191,23 +173,23 @@ export function AchievementPopup() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {achievers.map((achiever) => (
               <div
-                key={achiever.name}
+                key={achiever.id}
                 className="flex flex-col overflow-hidden rounded-[22px] border border-primary/10 bg-white shadow-card"
               >
                 <div className="relative aspect-[3/4] bg-light-bg">
                   <Image
                     src={achiever.image}
-                    alt={achiever.alt}
+                    alt={achievementAlt(achiever)}
                     fill
                     sizes="(max-width: 640px) 90vw, 340px"
                     loading="lazy"
                     className="object-cover"
-                    style={{ objectPosition: "50% 30%" }}
+                    style={{ objectPosition: achiever.focalPoint ?? "50% 30%" }}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5 text-left">
                   <p className="font-heading text-lg font-semibold text-primary">
-                    {achiever.name}
+                    {achiever.studentName}
                   </p>
                   {achiever.className ? (
                     <p className="mt-1 text-sm font-medium text-subtext">
@@ -216,10 +198,10 @@ export function AchievementPopup() {
                   ) : null}
                   <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-accent">
                     <Trophy className="h-4 w-4" aria-hidden="true" />
-                    International Rank 1
+                    {achiever.achievement}
                   </p>
                   <p className="mt-1 text-xs uppercase tracking-[0.16em] text-subtext">
-                    SOF Hindi Olympiad
+                    {achiever.competition}
                   </p>
                 </div>
               </div>
@@ -240,7 +222,7 @@ export function AchievementPopup() {
               Close
             </button>
             <Link
-              href="/gallery"
+              href="/achievements"
               onClick={close}
               className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white transition hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >

@@ -9,6 +9,7 @@ export const navigationLinks: NavigationLink[] = [
   { label: "Admissions", href: "/admissions" },
   { label: "Facilities", href: "/facilities" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Achievements", href: "/achievements" },
   { label: "Events", href: "/events" },
   { label: "Contact", href: "/contact" },
 ];
