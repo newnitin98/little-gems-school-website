@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import { AchievementCard } from "@/components/achievements/AchievementCard";
 import {
   achievements,
@@ -124,22 +124,28 @@ export function AchievementsExplorer() {
           <div className="flex items-center gap-2">
             <label
               htmlFor={sortId}
-              className="text-sm font-medium text-subtext"
+              className="shrink-0 text-sm font-medium text-subtext"
             >
               Sort
             </label>
-            <select
-              id={sortId}
-              value={sortBy}
-              onChange={(event) => setSortBy(event.target.value as SortValue)}
-              className="h-11 rounded-full border border-primary/15 bg-white px-4 text-sm font-medium text-primary shadow-card outline-none transition focus:border-primary focus-visible:ring-2 focus-visible:ring-accent"
-            >
-              {sortOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                id={sortId}
+                value={sortBy}
+                onChange={(event) => setSortBy(event.target.value as SortValue)}
+                className="h-11 w-full appearance-none rounded-full border border-primary/15 bg-white pl-4 pr-10 text-sm font-medium text-primary shadow-card outline-none transition hover:border-primary/40 focus:border-primary focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown
+                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-primary/60"
+                aria-hidden="true"
+              />
+            </div>
           </div>
         </div>
       </div>
