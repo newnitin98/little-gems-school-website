@@ -2,7 +2,7 @@ import { CTABand } from "@/components/sections/CTABand";
 import { GalleryGrid } from "@/components/ui/GalleryGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
-import { galleryCategories, galleryItems } from "@/data/gallery";
+import { galleryAlbums, galleryCategories, galleryItems } from "@/data/gallery";
 import { schoolInfo } from "@/data/school";
 
 export const metadata = {
@@ -25,7 +25,11 @@ export default function GalleryPage() {
       </SectionWrapper>
 
       <SectionWrapper>
-        <GalleryGrid items={galleryItems} categories={galleryCategories} />
+        <GalleryGrid
+          items={galleryItems}
+          categories={galleryCategories}
+          albums={galleryAlbums}
+        />
       </SectionWrapper>
 
       <CTABand

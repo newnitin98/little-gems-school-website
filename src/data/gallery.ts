@@ -301,3 +301,83 @@ export const galleryCategories: GalleryCategory[] = [
   "Activities",
   "Celebrations",
 ];
+
+/**
+ * An event album groups several photos from one occasion (e.g. a festival)
+ * under a single cover card. Add a new album object here and its photos to a
+ * folder under public/images/gallery/<category>/ — no component changes needed.
+ */
+export type GalleryAlbumImage = {
+  src: string;
+  alt: string;
+  focalPoint?: string;
+};
+
+export type GalleryAlbum = {
+  id: string;
+  title: string;
+  category: GalleryCategory;
+  cover: string;
+  coverAlt: string;
+  coverFocalPoint?: string;
+  description: string;
+  images: GalleryAlbumImage[];
+};
+
+const JANMASHTAMI_BASE = "/images/gallery/celebrations/janmashtami";
+
+export const galleryAlbums: GalleryAlbum[] = [
+  {
+    id: "janmashtami-celebration",
+    title: "Janmashtami Celebration",
+    category: "Celebrations",
+    cover: `${JANMASHTAMI_BASE}/janmashtami-1.jpeg`,
+    coverAlt:
+      "Little Gems School children dressed as Radha and Krishna during the Janmashtami celebration",
+    coverFocalPoint: "50% 35%",
+    description:
+      "Little Gems School celebrated Janmashtami with children dressed as Krishna and Radha, a matki-phod activity, and joyful cultural performances.",
+    images: [
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-1.jpeg`,
+        alt: "Little Gems School children dressed as Radha and Krishna during the Janmashtami celebration",
+        focalPoint: "50% 35%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-2.jpeg`,
+        alt: "Little Gems School students in festive costumes for the Janmashtami celebration",
+        focalPoint: "50% 40%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-3.jpeg`,
+        alt: "Young students celebrating Janmashtami at Little Gems School",
+        focalPoint: "50% 40%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-4.jpeg`,
+        alt: "Little Gems School children in traditional attire on Janmashtami",
+        focalPoint: "50% 40%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-5.jpeg`,
+        alt: "Students dressed as Krishna and Radha at the Little Gems School Janmashtami celebration",
+        focalPoint: "50% 40%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-6.jpeg`,
+        alt: "Little Gems School students taking part in the matki-phod activity during Janmashtami",
+        focalPoint: "50% 45%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-7.jpeg`,
+        alt: "Little Gems School children enjoying the Janmashtami festivities",
+        focalPoint: "50% 40%",
+      },
+      {
+        src: `${JANMASHTAMI_BASE}/janmashtami-newspaper.jpeg`,
+        alt: "Newspaper coverage of the Little Gems School Janmashtami celebration in Dainik Samyak Express",
+        focalPoint: "50% 20%",
+      },
+    ],
+  },
+];
