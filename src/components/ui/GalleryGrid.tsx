@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Images, X } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, Images, Link2, X } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import type {
   GalleryAlbum,
@@ -20,6 +20,8 @@ type GalleryGridProps = {
 type LightboxImage = { src: string; alt: string; focalPoint?: string };
 
 type Lightbox = {
+  kind: "item" | "album";
+  refId: string;
   title: string;
   category: GalleryCategory;
   images: LightboxImage[];
@@ -33,6 +35,7 @@ type GalleryCard = AlbumCard | ItemCard;
 export function GalleryGrid({ items, categories, albums = [] }: GalleryGridProps) {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory | "All">("All");
   const [lightbox, setLightbox] = useState<Lightbox | null>(null);
+  const [copied, setCopied] = useState(false);
   const filterOptions: Array<GalleryCategory | "All"> = ["All", ...categories];
 
   const cards = useMemo<GalleryCard[]>(() => {
@@ -47,6 +50,32 @@ export function GalleryGrid({ items, categories, albums = [] }: GalleryGridProps
     return [...albumCards, ...itemCards];
   }, [activeCategory, albums, items]);
 
+  const openItem = useCallback(
+    (item: GalleryItem) =>
+      setLightbox({
+        kind: "item",
+        refId: item.id,
+        title: item.title,
+        category: item.category,
+        images: [{ src: item.src, alt: item.alt, focalPoint: item.focalPoint }],
+        index: 0,
+      }),
+    [],
+  );
+
+  const openAlbum = useCallback(
+    (album: GalleryAlbum, startIndex = 0) =>
+      setLightbox({
+        kind: "album",
+        refId: album.id,
+        title: album.title,
+        category: album.category,
+        images: album.images,
+        index: Math.min(Math.max(startIndex, 0), album.images.length - 1),
+      }),
+    [],
+  );
+
   const closeLightbox = useCallback(() => setLightbox(null), []);
 
   const step = useCallback((direction: 1 | -1) => {
@@ -57,6 +86,50 @@ export function GalleryGrid({ items, categories, albums = [] }: GalleryGridProps
       return { ...current, index: nextIndex };
     });
   }, []);
+
+  // Open a photo directly when the page is loaded from a shared deep link.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const itemId = params.get("item");
+    const albumId = params.get("album");
+
+    if (itemId) {
+      const item = items.find((entry) => entry.id === itemId);
+      if (item) openItem(item);
+    } else if (albumId) {
+      const album = albums.find((entry) => entry.id === albumId);
+      if (album) {
+        const photo = Number(params.get("photo")) || 1;
+        openAlbum(album, photo - 1);
+      }
+    }
+    // Run once on mount only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Keep the URL in sync so the current photo is always shareable / copyable.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const base = window.location.pathname;
+
+    if (!lightbox) {
+      if (/[?&](item|album|photo)=/.test(window.location.search)) {
+        window.history.replaceState(null, "", base);
+      }
+      return;
+    }
+
+    const params = new URLSearchParams();
+    if (lightbox.kind === "item") {
+      params.set("item", lightbox.refId);
+    } else {
+      params.set("album", lightbox.refId);
+      params.set("photo", String(lightbox.index + 1));
+    }
+    window.history.replaceState(null, "", `${base}?${params.toString()}`);
+    setCopied(false);
+  }, [lightbox]);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -77,21 +150,40 @@ export function GalleryGrid({ items, categories, albums = [] }: GalleryGridProps
     };
   }, [lightbox, closeLightbox, step]);
 
-  const openItem = (item: GalleryItem) =>
-    setLightbox({
-      title: item.title,
-      category: item.category,
-      images: [{ src: item.src, alt: item.alt, focalPoint: item.focalPoint }],
-      index: 0,
-    });
+  const copyLink = useCallback(async () => {
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
 
-  const openAlbum = (album: GalleryAlbum) =>
-    setLightbox({
-      title: album.title,
-      category: album.category,
-      images: album.images,
-      index: 0,
-    });
+    const legacyCopy = () => {
+      try {
+        const textarea = document.createElement("textarea");
+        textarea.value = url;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(textarea);
+        return ok;
+      } catch {
+        return false;
+      }
+    };
+
+    let succeeded = false;
+    try {
+      await navigator.clipboard.writeText(url);
+      succeeded = true;
+    } catch {
+      succeeded = legacyCopy();
+    }
+
+    if (succeeded) {
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    }
+  }, []);
 
   const active = lightbox ? lightbox.images[lightbox.index] : null;
   const hasMultiple = lightbox ? lightbox.images.length > 1 : false;
@@ -201,12 +293,12 @@ export function GalleryGrid({ items, categories, albums = [] }: GalleryGridProps
           }}
         >
           <div className="mx-auto flex h-full w-full max-w-5xl flex-col">
-            <div className="mb-4 flex items-center justify-between text-white">
-              <div>
+            <div className="mb-4 flex items-center justify-between gap-4 text-white">
+              <div className="min-w-0">
                 <p className="text-sm uppercase tracking-[0.22em] text-secondary">
                   {lightbox.category}
                 </p>
-                <h3 className="mt-2 font-heading text-2xl font-semibold">
+                <h3 className="mt-2 truncate font-heading text-2xl font-semibold">
                   {lightbox.title}
                   {hasMultiple ? (
                     <span className="ml-3 align-middle text-base font-normal text-white/70">
@@ -215,14 +307,34 @@ export function GalleryGrid({ items, categories, albums = [] }: GalleryGridProps
                   ) : null}
                 </h3>
               </div>
-              <button
-                type="button"
-                onClick={closeLightbox}
-                className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
-                aria-label="Close gallery preview"
-              >
-                <X className="h-6 w-6" />
-              </button>
+              <div className="flex shrink-0 items-center gap-2">
+                <button
+                  type="button"
+                  onClick={copyLink}
+                  className="inline-flex h-12 items-center gap-2 rounded-full bg-white/10 px-4 text-sm font-semibold transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                  aria-label="Copy shareable link to this photo"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-4 w-4 text-secondary" aria-hidden="true" />
+                      <span className="hidden sm:inline">Link copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Link2 className="h-4 w-4" aria-hidden="true" />
+                      <span className="hidden sm:inline">Copy link</span>
+                    </>
+                  )}
+                </button>
+                <button
+                  type="button"
+                  onClick={closeLightbox}
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                  aria-label="Close gallery preview"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
             </div>
 
             <div className="relative flex-1 overflow-hidden rounded-[32px] border border-white/10 bg-white/5">
