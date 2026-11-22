@@ -1,6 +1,7 @@
 export type AchievementCategory =
   | "sof-hindi-olympiad"
   | "ito-junior-olympiad"
+  | "flying-kick"
   | "sports"
   | "science-fair"
   | "drawing"
@@ -24,6 +25,8 @@ export type Achievement = {
   image: string;
   description: string;
   featured?: boolean;
+  /** Optional medal tier; used to colour the card's medal badge. */
+  medal?: "gold" | "silver" | "bronze";
   /** Optional explicit alt text; a descriptive default is generated when omitted. */
   alt?: string;
   /** Optional object-position for the image crop, e.g. "50% 25%". */
@@ -37,6 +40,7 @@ export type Achievement = {
 export const categoryLabels: Record<AchievementCategory, string> = {
   "sof-hindi-olympiad": "SOF Hindi Olympiad",
   "ito-junior-olympiad": "ITO Junior Olympiad",
+  "flying-kick": "National Flying Kick",
   sports: "Sports",
   "science-fair": "Science Fair",
   drawing: "Drawing",
@@ -54,6 +58,7 @@ export const categoryLabels: Record<AchievementCategory, string> = {
 export const categoryOrder: AchievementCategory[] = [
   "sof-hindi-olympiad",
   "ito-junior-olympiad",
+  "flying-kick",
   "sports",
   "science-fair",
   "drawing",
@@ -69,6 +74,7 @@ export const categoryOrder: AchievementCategory[] = [
 
 const ITO_BASE = "/images/achievements/ito-junior-olympiad";
 const SOF_BASE = "/images/achievements/sof-hindi-olympiad";
+const FLYING_KICK_BASE = "/images/achievements/flying-kick";
 
 export const achievements: Achievement[] = [
   {
@@ -228,6 +234,136 @@ export const achievements: Achievement[] = [
     image: `${ITO_BASE}/yogita-barman.jpeg`,
     description: "Rank Holder in the ITO Junior Olympiad",
     focalPoint: "50% 25%",
+  },
+  {
+    id: "fk-divyansh-shripal",
+    studentName: "Divyansh Shripal",
+    className: "Class 3",
+    competition: "National Flying Kick Competition",
+    achievement: "Gold Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/divyansh-shripal.jpeg`,
+    description: "Gold Medal at the National Flying Kick Competition 2026",
+    medal: "gold",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-hansika-patel",
+    studentName: "Hansika Patel",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Gold Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/hansika-patel.jpeg`,
+    description: "Gold Medal at the National Flying Kick Competition 2026",
+    medal: "gold",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-kanak-dehariya",
+    studentName: "Kanak Dehariya",
+    className: "Class 3",
+    competition: "National Flying Kick Competition",
+    achievement: "Gold Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/kanak-dehariya.jpeg`,
+    description: "Gold Medal at the National Flying Kick Competition 2026",
+    medal: "gold",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-mayank-lodhi",
+    studentName: "Mayank Lodhi",
+    className: "Class 3",
+    competition: "National Flying Kick Competition",
+    achievement: "Gold Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/mayank-lodhi.jpeg`,
+    description: "Gold Medal at the National Flying Kick Competition 2026",
+    medal: "gold",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-shalini-vishwakarma",
+    studentName: "Shalini Vishwakarma",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Gold Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/shalini-vishwakarma.jpeg`,
+    description: "Gold Medal at the National Flying Kick Competition 2026",
+    medal: "gold",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-ved-namdeo",
+    studentName: "Ved Namdeo",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Gold Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/ved-namdeo.jpeg`,
+    description: "Gold Medal at the National Flying Kick Competition 2026",
+    medal: "gold",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-abhay-shripal",
+    studentName: "Abhay Shripal",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Silver Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/abhay-shripal.jpeg`,
+    description: "Silver Medal at the National Flying Kick Competition 2026",
+    medal: "silver",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-anushree-patel",
+    studentName: "Anushree Patel",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Silver Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/anushree-patel.jpeg`,
+    description: "Silver Medal at the National Flying Kick Competition 2026",
+    medal: "silver",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-naman-lodhi",
+    studentName: "Naman Lodhi",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Silver Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/naman-lodhi.jpeg`,
+    description: "Silver Medal at the National Flying Kick Competition 2026",
+    medal: "silver",
+    focalPoint: "50% 30%",
+  },
+  {
+    id: "fk-vedika-mourya",
+    studentName: "Vedika Mourya",
+    className: "Class 5",
+    competition: "National Flying Kick Competition",
+    achievement: "Bronze Medal",
+    year: 2026,
+    category: "flying-kick",
+    image: `${FLYING_KICK_BASE}/vedika-mourya.jpeg`,
+    description: "Bronze Medal at the National Flying Kick Competition 2026",
+    medal: "bronze",
+    focalPoint: "50% 30%",
   },
 ];
 

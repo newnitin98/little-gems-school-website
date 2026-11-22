@@ -13,6 +13,15 @@ type AchievementCardProps = {
   priority?: boolean;
 };
 
+const medalBadgeStyles: Record<
+  NonNullable<Achievement["medal"]>,
+  string
+> = {
+  gold: "bg-[#FDF3D1] text-[#9A7B13]",
+  silver: "bg-[#ECEEF1] text-[#5B6673]",
+  bronze: "bg-[#F6E3D2] text-[#8A4B23]",
+};
+
 export function AchievementCard({
   item,
   featured = false,
@@ -44,7 +53,14 @@ export function AchievementCard({
           className="object-cover transition duration-500 group-hover:scale-105"
           style={{ objectPosition: item.focalPoint ?? "50% 25%" }}
         />
-        <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/92 px-3 py-1 text-xs font-bold text-accent shadow-card backdrop-blur">
+        <span
+          className={cn(
+            "absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold shadow-card backdrop-blur",
+            item.medal
+              ? medalBadgeStyles[item.medal]
+              : "bg-white/92 text-accent",
+          )}
+        >
           <Medal className="h-3.5 w-3.5" aria-hidden="true" />
           {item.achievement}
         </span>

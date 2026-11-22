@@ -21,6 +21,10 @@ const sortOptions: { value: SortValue; label: string }[] = [
   { value: "alphabetical", label: "Alphabetical" },
 ];
 
+const medalRankOrder: Record<string, number> = { gold: 0, silver: 1, bronze: 2 };
+const medalRank = (medal?: string) =>
+  medal ? medalRankOrder[medal] ?? 3 : 3;
+
 export function AchievementsExplorer() {
   const [activeFilter, setActiveFilter] = useState<FilterValue>("all");
   const [query, setQuery] = useState("");
@@ -54,9 +58,17 @@ export function AchievementsExplorer() {
     sorted.sort((a, b) => {
       switch (sortBy) {
         case "newest":
-          return b.year - a.year || a.studentName.localeCompare(b.studentName);
+          return (
+            b.year - a.year ||
+            medalRank(a.medal) - medalRank(b.medal) ||
+            a.studentName.localeCompare(b.studentName)
+          );
         case "oldest":
-          return a.year - b.year || a.studentName.localeCompare(b.studentName);
+          return (
+            a.year - b.year ||
+            medalRank(a.medal) - medalRank(b.medal) ||
+            a.studentName.localeCompare(b.studentName)
+          );
         case "competition":
           return (
             a.competition.localeCompare(b.competition) ||
