@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import SchemaOrg from "@/components/SchemaOrg";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Footer } from "@/components/layout/Footer";
@@ -128,6 +129,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <MobileCTABar />
+        <Analytics />
       </body>
     </html>
   );
