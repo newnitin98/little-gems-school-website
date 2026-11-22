@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactElement, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 type ButtonVariant = "primary" | "secondary" | "ghost" | "outline";
@@ -39,8 +39,8 @@ type LinkButtonProps = SharedProps &
     href: string;
   };
 
-export function Button(props: LinkButtonProps): JSX.Element;
-export function Button(props: ButtonProps): JSX.Element;
+export function Button(props: LinkButtonProps): ReactElement;
+export function Button(props: ButtonProps): ReactElement;
 export function Button({
   children,
   className,

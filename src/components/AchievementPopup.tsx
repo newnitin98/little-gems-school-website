@@ -90,7 +90,6 @@ export function AchievementPopup() {
       window.clearTimeout(focusTimer);
       previouslyFocusedRef.current?.focus?.();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   function close() {
